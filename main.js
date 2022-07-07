@@ -69,7 +69,8 @@ const UI = {
             
           p.then(value => {
             userInputElm.value = userData;
-            resultOutPutElm.value = userData * value[xx]
+              const final_data = userData * value[xx];
+            resultOutPutElm.value = final_data.toFixed(2);
            
           }).catch(err => {
             console.log(err);

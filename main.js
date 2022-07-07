@@ -69,7 +69,7 @@ const UI = {
             
           p.then(value => {
             userInputElm.value = userData;
-              let final_data = userData * value[xx];
+            let final_data = userData * value[xx];
             resultOutPutElm.value = final_data.toFixed(2);
            
           }).catch(err => {
@@ -93,7 +93,8 @@ const UI = {
             
           p.then(value => {
             userInputElm.value = userData;
-            resultOutPutElm.value = userData * value[xx]
+            let final_data = userData * value[xx];
+            resultOutPutElm.value = final_data.toFixed(2);
             
           }).catch(err => {
             console.log(err);
@@ -116,7 +117,8 @@ const UI = {
             
           p.then(value => {
             userInputElm.value = userData;
-            resultOutPutElm.value = userData * value[xx]
+            let final_data = userData * value[xx];
+            resultOutPutElm.value = final_data.toFixed(2);
             
           }).catch(err => {
             console.log(err);
@@ -139,7 +141,8 @@ const UI = {
             const xx = userConvertFrom + "_" + convertTo;
             
           p.then(value => {
-            userInputElm.value = outPut / value[xx];
+            let final_data = outPut / value[xx];
+            userInputElm.value = final_data.toFixed(2);
             resultOutPutElm.value = outPut;
             
           }).catch(err => {
@@ -190,7 +193,8 @@ const currencyList = {
             
           p.then(value => {
             userInputElm.value = userData;
-            resultOutPutElm.value = userData * value[xx]
+            let final_data = userData * value[xx];
+            resultOutPutElm.value = final_data.toFixed(2);
            
           }).catch(err => {
             console.log(err);
@@ -202,5 +206,4 @@ const currencyList = {
 }
 currencyList.loadWindow();
 currencyList.getCurrency();
-
 

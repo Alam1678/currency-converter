@@ -211,7 +211,7 @@ const currencyList = {
             userInputElm.value = userData;
             let final_data = userData * value[xx];
             resultOutPutElm.value = final_data.toFixed(4);
-            txtOutPut.innerHTML = textFrom + ' ' + userData + ' = ' + textTo + ' ' + final_data.toFixed(4);
+            txtOutPut.innerHTML = `${textFrom} ${userData} = ${textTo} ${final_data.toFixed(4)}`;
           }).catch(err => {
             console.log(err);
           });

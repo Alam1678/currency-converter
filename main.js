@@ -1,7 +1,7 @@
 
 const currencyConvert = {
-    //API_KEY : 'ddab7737ed788dc37149',
-    API_KEY : '8e637920d7c1f4ce0b1e',
+    API_KEY : 'ddab7737ed788dc37149',
+    //API_KEY : '8e637920d7c1f4ce0b1e',
     convertFrom : '',
     convertTo : '',
     
@@ -60,6 +60,9 @@ const UI = {
             const convertTo = userConvertToElm.value;
             const userData = userInputElm.value;
             const userConvertFrom = userConvertFromElm.value;
+            const textFrom= userConvertFromElm.options[userConvertFromElm.selectedIndex].text;
+        const textTo= userConvertToElm.options[userConvertToElm.selectedIndex].text;
+        const txtOutPut = document.getElementById("outPutText");
             //resultOutPutElm.value = userData * 5;
         //   console.log(convertTo);
           //const result = await currencyConvert.currencyConverts()
@@ -70,8 +73,8 @@ const UI = {
           p.then(value => {
             userInputElm.value = userData;
             let final_data = userData * value[xx];
-            resultOutPutElm.value = final_data.toFixed(2);
-           
+            resultOutPutElm.value = final_data.toFixed(4);
+            txtOutPut.innerHTML = textFrom + ' ' + userData + ' = ' + textTo + ' ' + final_data.toFixed(4);
           }).catch(err => {
             console.log(err);
           });
@@ -84,6 +87,9 @@ const UI = {
             const convertTo = userConvertToElm.value;
             const userData = userInputElm.value;
             const userConvertFrom = userConvertFromElm.value;
+            const textFrom= userConvertFromElm.options[userConvertFromElm.selectedIndex].text;
+        const textTo= userConvertToElm.options[userConvertToElm.selectedIndex].text;
+        const txtOutPut = document.getElementById("outPutText");
             //resultOutPutElm.value = userData * 5;
         //   console.log(convertTo);
           //const result = await currencyConvert.currencyConverts()
@@ -94,8 +100,8 @@ const UI = {
           p.then(value => {
             userInputElm.value = userData;
             let final_data = userData * value[xx];
-            resultOutPutElm.value = final_data.toFixed(2);
-            
+            resultOutPutElm.value = final_data.toFixed(4);
+            txtOutPut.innerHTML = textFrom + ' ' + userData + ' = ' + textTo + ' ' + final_data.toFixed(4);
           }).catch(err => {
             console.log(err);
           });
@@ -108,6 +114,9 @@ const UI = {
             const convertTo = userConvertToElm.value;
             const userData = userInputElm.value;
             const userConvertFrom = userConvertFromElm.value;
+            const textFrom= userConvertFromElm.options[userConvertFromElm.selectedIndex].text;
+        const textTo= userConvertToElm.options[userConvertToElm.selectedIndex].text;
+        const txtOutPut = document.getElementById("outPutText");
             //resultOutPutElm.value = userData * 5;
         //   console.log(convertTo);
           //const result = await currencyConvert.currencyConverts()
@@ -118,8 +127,8 @@ const UI = {
           p.then(value => {
             userInputElm.value = userData;
             let final_data = userData * value[xx];
-            resultOutPutElm.value = final_data.toFixed(2);
-            
+            resultOutPutElm.value = final_data.toFixed(4);
+            txtOutPut.innerHTML = textFrom + ' ' + userData + ' = ' + textTo + ' ' + final_data.toFixed(4);
           }).catch(err => {
             console.log(err);
           });
@@ -133,6 +142,9 @@ const UI = {
             ///const userData = userInputElm.value;
             const userConvertFrom = userConvertFromElm.value;
             const outPut = resultOutPutElm.value;
+            const textFrom = userConvertFromElm.options[userConvertFromElm.selectedIndex].text;
+        const textTo = userConvertToElm.options[userConvertToElm.selectedIndex].text;
+        const txtOutPut = document.getElementById("outPutText");
             //resultOutPutElm.value = userData * 5;
         //   console.log(convertTo);
           //const result = await currencyConvert.currencyConverts()
@@ -142,9 +154,9 @@ const UI = {
             
           p.then(value => {
             let final_data = outPut / value[xx];
-            userInputElm.value = final_data.toFixed(2);
+            userInputElm.value = final_data.toFixed(4);
             resultOutPutElm.value = outPut;
-            
+            txtOutPut.innerHTML = textTo + ' ' + outPut + ' = ' + textFrom + ' ' + final_data.toFixed(4);
           }).catch(err => {
             console.log(err);
           });
@@ -179,8 +191,12 @@ const currencyList = {
     },
     async loadWindow(){ window.addEventListener('DOMContentLoaded', async () => {
         const { userConvertFromElm, resultOutPutElm, userInputElm, userConvertToElm } = UI.loadSelectors();
+       
         userConvertFromElm.options[userConvertFromElm.options.length] = new Option('United State Dollar', 'USD');
         userConvertToElm.options[userConvertToElm.options.length] = new Option('Bangladeshi Taka', 'BDT');
+        const textFrom= userConvertFromElm.options[userConvertFromElm.selectedIndex].text;
+        const textTo= userConvertToElm.options[userConvertToElm.selectedIndex].text;
+        const txtOutPut = document.getElementById("outPutText");
         const convertTo = 'BDT';
             const userData = 1;
             const userConvertFrom = 'USD';
@@ -194,8 +210,8 @@ const currencyList = {
           p.then(value => {
             userInputElm.value = userData;
             let final_data = userData * value[xx];
-            resultOutPutElm.value = final_data.toFixed(2);
-           
+            resultOutPutElm.value = final_data.toFixed(4);
+            txtOutPut.innerHTML = textFrom + ' ' + userData + ' = ' + textTo + ' ' + final_data.toFixed(4);
           }).catch(err => {
             console.log(err);
           });
